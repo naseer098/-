@@ -1,0 +1,222 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Me Nasser</title>
+    <link href="https://fonts.googleapis.com/css2?family=Roboto:wght@400;700&display=swap" rel="stylesheet">
+    <style>
+        body {
+            font-family: 'Roboto', sans-serif;
+            margin: 0;
+            padding: 0;
+            background: url('https://wallpaperwaifu.com/wp-content/uploads/2019/09/after-effects-anime-girl-thumb.jpg') no-repeat center center fixed;
+            background-size: cover;
+            color: #000000;
+            position: relative;
+            min-height: 100vh;
+            overflow: hidden;
+        }
+        h1 {
+            font-size: 4em;
+            margin: 0;
+            color: #ffffff;
+            text-shadow: 3px 3px 10px rgba(0, 0, 0, 0.8);
+            font-family: 'Cursive', sans-serif;
+        }
+        .about {
+            padding: 40px;
+            background: rgba(255, 255, 255, 0.15);
+            border-radius: 12px;
+            box-shadow: 0 10px 30px rgba(0, 0, 0, 0.3);
+            margin: 30px auto;
+            max-width: 600px;
+            position: relative;
+            z-index: 1;
+            overflow-y: auto; /* Enable scrolling if content overflows */
+            max-height: 80vh; /* Limit height to enable scrolling */
+        }
+        button {
+            padding: 15px 30px;
+            background: #000000;
+            color: #ffffff;
+            border: none;
+            border-radius: 6px;
+            cursor: pointer;
+            font-size: 1.1em;
+            transition: background 0.3s;
+        }
+        .languages {
+            display: none;
+            margin-top: 20px;
+            padding: 15px;
+            background: rgba(255, 255, 255, 0.2);
+            border-radius: 8px;
+        }
+        .language-item {
+            margin: 10px 0;
+            padding: 15px;
+            border-radius: 8px;
+            background: rgba(255, 255, 255, 0.25);
+        }
+        pre {
+            background: rgba(231, 243, 254, 0.9);
+            padding: 15px;
+            border-radius: 6px;
+            color: #333;
+            font-size: 0.9em;
+        }
+        .snowflake {
+            position: absolute;
+            top: -10%;
+            color: #ffffff;
+            font-size: 1em;
+            pointer-events: none;
+            animation: fall linear infinite;
+        }
+        @keyframes fall {
+            to {
+                transform: translateY(100vh);
+            }
+        }
+    </style>
+</head>
+<body>
+    <h1>الحلو ناصر</h1>
+    <div class="about">
+        <p><strong>Age:</strong> 15</p>
+        <p><strong>Name:</strong> Nasser</p>
+        <p><strong>Nationality:</strong> Saudi</p>
+        <p><strong>Hobby:</strong> Programming</p>
+        <button id="showLanguages">Show Programming Languages</button>
+        <div class="languages" id="languages">
+            <div class="language-item">
+                <strong>HTML:</strong>
+                <pre>
+&lt;!DOCTYPE html&gt;
+&lt;html&gt;
+    &lt;head&gt;
+        &lt;title&gt;Page Title&lt;/title&gt;
+    &lt;/head&gt;
+    &lt;body&gt;
+        &lt;h1&gt;Hello World!&lt;/h1&gt;
+    &lt;/body&gt;
+&lt;/html&gt;
+                </pre>
+            </div>
+            <div class="language-item">
+                <strong>CSS:</strong>
+                <pre>
+body {
+    background-color: lightblue;
+}
+
+h1 {
+    color: navy;
+}
+                </pre>
+            </div>
+            <div class="language-item">
+                <strong>JavaScript:</strong>
+                <pre>
+function greetUser(name) {
+    alert("Hello, " + name + "!");
+}
+
+greetUser("Nasser");
+                </pre>
+            </div>
+            <div class="language-item">
+                <strong>Python:</strong>
+                <pre>
+def calculate_sum(a, b):
+    return a + b
+
+result = calculate_sum(5, 7)
+print(f"The sum is: {result}")
+                </pre>
+            </div>
+            <div class="language-item">
+                <strong>Lua:</strong>
+                <pre>
+function greet(name)
+    print("Hello, " .. name .. "!")
+end
+
+greet("Nasser")
+                </pre>
+            </div>
+            <div class="language-item">
+                <strong>Java:</strong>
+                <pre>
+public class Main {
+    public static void main(String[] args) {
+        System.out.println("Hello, Nasser!");
+    }
+}
+                </pre>
+            </div>
+            <div class="language-item">
+                <strong>C#:</strong>
+                <pre>
+using System;
+
+class Program {
+    static void Main() {
+        Console.WriteLine("Hello, Nasser!");
+    }
+}
+                </pre>
+            </div>
+            <div class="language-item">
+                <strong>Ruby:</strong>
+                <pre>
+def greet(name)
+    puts "Hello, #{name}!"
+end
+
+greet("Nasser")
+                </pre>
+            </div>
+            <div class="language-item">
+                <strong>PHP:</strong>
+                <pre>
+<?php
+echo "Hello, Nasser!";
+?>
+                </pre>
+            </div>
+        </div>
+    </div>
+
+    <audio controls autoplay loop>
+        <source src="s/2024-10-29-234719440 (1).mp4" type="audio/mpeg"> <!-- Replace with actual audio URL -->
+        Your browser does not support the audio tag.
+    </audio>
+
+    <script>
+        document.getElementById('showLanguages').onclick = function() {
+            var languages = document.getElementById('languages');
+            if (languages.style.display === 'none' || languages.style.display === '') {
+                languages.style.display = 'block';
+            } else {
+                languages.style.display = 'none';
+            }
+        };
+
+        function createSnowflake() {
+            const snowflake = document.createElement('div');
+            snowflake.innerHTML = '❄'; 
+            snowflake.classList.add('snowflake');
+            snowflake.style.left = Math.random() * 100 + 'vw';
+            snowflake.style.animationDuration = Math.random() * 3 + 2 + 's'; 
+            document.body.appendChild(snowflake);
+            setTimeout(() => {
+                snowflake.remove();
+            }, 5000); 
+        }
+
+        setInterval(createSnowflake, 200); 
+    </script>
+</body>
+</html>
